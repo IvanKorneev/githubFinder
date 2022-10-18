@@ -6,8 +6,10 @@ import {useEffect, useState} from "react";
 
 export const ThemeSwitcher = () => {
     const [isDark, setDark] = useState(false);
+
     const themeText = isDark ? 'Light' : 'Dark';
     const ThemeIcon = isDark ? SunIcon : MoonIcon;
+
     useEffect(() => {
         document.body.setAttribute('data-them', isDark ? 'dark' : 'light');
     }, [isDark])
