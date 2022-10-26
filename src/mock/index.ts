@@ -9,6 +9,7 @@ export const defaultUser:LocalGithubUser= {
     "blog": "mishanep.com",
     "bio": "React/Vue developer",
     "twitter": "pcgramota",
+    "location":"Malonga",
     "repos": 60,
     "followers": 211,
     "following": 6,
