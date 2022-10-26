@@ -9,13 +9,22 @@ interface InfoItemProps {
 
 export const InfoItem = ({icon, text, isLink}: InfoItemProps) => {
     const currentTex = text || 'Not Available';
-    let currentHref: string;
+    let currentHref = '';
     if (isLink) {
         currentHref = text && text.startsWith('http') ? text : `https//${text}`;
     }
     return (
-        <div className={styles.InfoItem}>
-
+        <div className={`${styles.infoItem}${text ? '' : `${styles.empty}`}`}>
+            {icon}
+            <div>
+                {isLink && text ? (<a href={currentHref}
+                                      target='_blank'
+                                      rel='noreferrer'
+                                      className={styles.link}>
+                        currentTex
+                    </a>) :
+                    currentTex}
+            </div>
         </div>
     );
 };
