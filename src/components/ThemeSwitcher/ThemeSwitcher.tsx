@@ -11,7 +11,7 @@ export const ThemeSwitcher = () => {
     const ThemeIcon = isDark ? SunIcon : MoonIcon;
 
     useEffect(() => {
-        document.body.setAttribute('data-them', isDark ? 'dark' : 'light');
+        document.body.setAttribute('data-theme', isDark ? 'dark' : 'light');
     }, [isDark])
     return (
         <div className={styles.switcher} onClick={() => setDark(!isDark)}>
